@@ -40,6 +40,11 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/analitic', methods=['GET'])
+def analitic():
+    return render_template('analitic.html')
+
+
 @app.route('/admin', methods=['GET'])
 def admin():
     return render_template('admin.html')
