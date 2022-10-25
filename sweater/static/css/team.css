@@ -9,7 +9,7 @@ p,a,h1,h2,h3,h4 {
 }
 
 .section-team {
-	font-family: "Poppins", sans-serif;
+	font-family: "Roboto", sans-serif;
 	padding: 80px 0;
 }
 
@@ -27,6 +27,11 @@ p,a,h1,h2,h3,h4 {
 .section-team .header-section .title {
     font-weight: 700;
     font-size: 45px;
+}
+
+.section-team .title-section .h4:text {
+    color: #f6f9ff;
+
 }
 
 .section-team .single-person {
@@ -121,3 +126,5 @@ p,a,h1,h2,h3,h4 {
 .section-4 {
     background: #E5E5E5;
 }
+
+/*--- contact form ---*/
