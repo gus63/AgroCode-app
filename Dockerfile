@@ -1,19 +1,10 @@
-# start by pulling the python image
-FROM python:3.9
-
-# copy the requirements file into the image
-COPY ./requirements.txt /app/requirements.txt
-
-# switch working directory
-WORKDIR /app
-
-# install the dependencies and packages in the requirements file
+FROM python:3
+MAINTAINER Vyacheslav Tyurin 'tvm91@yandex.ru'
+RUN apt-get update -y && apt-get install -y build-essential
+COPY . /First-app
+WORKDIR /First-app
+RUN pip install --upgrade pip
+RUN pip install --upgrade -r requirements.txt
 RUN pip install -r requirements.txt
-
-# copy every content from the local file to the image
-COPY . /app
-
-# configure the container to run in an executed manner
-ENTRYPOINT ["python"]
-
-CMD ["start.py"]
+ENTRYPOINT ['python']
+CMD ['app.py']
