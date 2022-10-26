@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.9.15'
 
 services:
   agro_web:
@@ -11,7 +11,7 @@ services:
   postgres:
     env_file: ./docker/.env-postgresql
     container_name: postgresql_agro_container
-    image: postgres:14.3-alpine
+    image: postgres:15
     volumes:
       - agrodb:/var/lib/postgresql/data
     ports:
