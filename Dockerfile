@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.6
 MAINTAINER Vyacheslav Tyurin 'tvm91@yandex.ru'
 RUN apt-get update -y && apt-get install -y build-essential
 COPY . /First-app
