@@ -1,44 +1,23 @@
-version: '3.9.15'
-
+version: '2.1'
 services:
-  agro_web:
-    container_name: python_agrocode_web_container
-    build:
-    ports:
-      - 5000:5000
-    restart: unless-stopped
-
   postgres:
-    env_file: ./docker/.env-postgresql
-    container_name: postgresql_agro_container
-    image: postgres:15
+    restart: always
+    image: postgres:10
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
     volumes:
-      - agrodb:/var/lib/postgresql/data
+      - ./postgres-data/postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-    restart: unless-stopped
-    networks:
-    - backend
-
-    pgadmin:
-      container_name: pgadmin_container
-      image: dpage/pgadmin4
-      enviroment:
-        PGADMIN_DEFAULT_EMAIL: tvm91@yandex.ru
-        PGADMIN_DEFAULT_PASSWORD: admin1234
-        PGADMIN_CONFIG_SERVER_MODE: 'False'
-      volumes:
-         - pgadmin:/var/lib/pgadmin
-      ports:
-        - "${PGADMIN_PORT:-5050}:80"
-      restart: unless-stopped
-      networks:
-        - backend
-  volumes:
-      agrodb:
-        driver: local
-      pgadmin:
-        driver: local
-  networks:
-    backend:
-      driver: bridge
+  app:
+    restart: always
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+    entrypoint: ["python", "start.py","runserver"]

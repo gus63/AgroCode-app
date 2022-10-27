@@ -1,10 +1,9 @@
 FROM python:3.6
-MAINTAINER Vyacheslav Tyurin 'tvm91@yandex.ru'
-RUN apt-get update -y && apt-get install -y build-essential
-COPY . /First-app
-WORKDIR /First-app
-RUN pip install --upgrade pip
-RUN pip install --upgrade -r requirements.txt
-RUN pip install -r requirements.txt
-ENTRYPOINT ['python']
-CMD ['app.py']
+LABEL maintainer = "Vyacheslav Tyurin <tvm91@yandex.ru>"
+RUN apt-get update
+RUN mkdir /app
+WORKDIR /app
+COPY . /app
+RUN pip install --no-cache-dir -r requirements.txt
+ENV FLASK_ENV="docker"
+EXPOSE 5000
