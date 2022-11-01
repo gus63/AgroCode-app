@@ -1,4 +1,5 @@
   version: '3.9'
+
   services:
     postgres:
         container_name: db_agro
@@ -14,6 +15,7 @@
           - "5432:5432"
         networks:
           - backend
+          -
     app:
       container_name: agro_app
       restart: unless-stopped
@@ -23,6 +25,10 @@
       volumes:
         - .:/app
       entrypoint: ["python", "start.py","runserver"]
+
+  volumes:
+      db_agro:
+          driver: local
   networks:
       backend:
           driver: bridge
