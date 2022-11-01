@@ -1,25 +1,28 @@
-version: '3.9'
-services:
-  postgres:
-      container_name: db_agro
+  version: '3.9'
+  services:
+    postgres:
+        container_name: db_agro
+        restart: unless-stopped
+        image: postgres:14
+        environment:
+          - POSTGRES_USER=${POSTGRES_USER}
+          - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+          - POSTGRES_DB=${POSTGRES_DB}
+        volumes:
+          - ./postgres-data/postgres:/var/lib/postgresql/data
+        ports:
+          - "5432:5432"
+        networks:
+          - backend
+    app:
+      container_name: agro_app
       restart: unless-stopped
-      image: postgres:14
-      environment:
-        - POSTGRES_USER=${POSTGRES_USER}
-        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-        - POSTGRES_DB=${POSTGRES_DB}
-      volumes:
-        - ./postgres-data/postgres:/var/lib/postgresql/data
+      build: .
       ports:
-        - "5432:5432"
-      networks:
-        - bridge
-  app:
-    container_name: agro_app
-    restart: unless-stopped
-    build: .
-    ports:
-      - 5000:5000
-    volumes:
-      - .:/app
-    entrypoint: ["python", "start.py","runserver"]
+        - 5000:5000
+      volumes:
+        - .:/app
+      entrypoint: ["python", "start.py","runserver"]
+  networks:
+      backend:
+          driver: bridge
