@@ -15,7 +15,7 @@
           - "5432:5432"
         networks:
           - backend
-          -
+
     app:
       container_name: agro_app
       restart: unless-stopped
