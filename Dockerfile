@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.9
 LABEL maintainer = "Vyacheslav Tyurin <tvm91@yandex.ru>"
 RUN apt-get update
 RUN mkdir /app

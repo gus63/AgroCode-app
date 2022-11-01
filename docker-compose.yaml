@@ -1,8 +1,9 @@
-  version: '3.6'
+  version: '3.9'
 
   services:
     postgres:
-        container_name: db_agro
+        env_file: ./docker/.env
+        container_name: postgres_db_agro
         restart: unless-stopped
         image: postgres:14
         environment:
@@ -16,7 +17,7 @@
         networks:
           - backend
 
-    app:
+    agro_app:
       container_name: agro_app
       restart: unless-stopped
       build: .
