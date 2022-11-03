@@ -23,14 +23,14 @@
       restart: unless-stopped
       build: .
       ports:
-        - 5000:5000
+        - "5000:5000"
       depends_on:
         - postgres
       env_file:
         - .env
 
     nginx:
-      image: "nginx:1.23.2"
+      image: nginx:1.23.2
       ports:
         - "1080:80"
       volumes:
