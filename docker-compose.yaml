@@ -34,7 +34,7 @@
       ports:
         - "1080:80"
       volumes:
-        - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+        - ./nginx.conf:/etc/nginx/nginx.conf:ro
         - ./nginx/index.html:/first-app/sweater/templates/html:ro
       networks:
         - backend
