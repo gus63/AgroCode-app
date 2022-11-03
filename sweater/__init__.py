@@ -7,7 +7,7 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 auth = Blueprint('auth', __name__)
 app.secret_key = '12QwrT!'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123@localhost/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:admin1234@localhost/test'
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 db = SQLAlchemy(app)
 manager = LoginManager(app)
