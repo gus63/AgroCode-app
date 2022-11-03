@@ -26,6 +26,13 @@
         - .:/app
       entrypoint: ["python", "start.py","runserver"]
 
+    nginx:
+      container_name: agro_server
+      restart: unless-stopped
+      volumes:
+        -
+
+
     pgadmin:
       container_name: pgadmin_container
       image: dpage/pgadmin4
