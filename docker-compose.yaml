@@ -30,7 +30,7 @@
         - .env
 
     nginx:
-      container_name: nginx_agrocod
+      container_name: agrocod_server
       image: nginx:1.23.2
       ports:
         - "1080:80"
