@@ -30,12 +30,11 @@
         - .env
 
     nginx:
-      container_name: agrocod_server
       image: nginx:1.23.2
       ports:
         - "1080:80"
       volumes:
-        - ./conf.d:/etc/nginx/conf.d
+        - ./conf.d:/etc/nginx/conf.d:rw
       networks:
         - backend
       depends_on:
