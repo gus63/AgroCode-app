@@ -30,11 +30,12 @@
         - .env
 
     nginx:
+      container_name: nginx_agrocod
       image: nginx:1.23.2
       ports:
         - "1080:80"
       volumes:
-        - ./conf.d:/etc/nginx/conf.d
+        - ./conf.d:/etc/nginx/conf.d:Z
       networks:
         - backend
       depends_on:
