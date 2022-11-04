@@ -27,7 +27,7 @@
       depends_on:
         - postgres
       environment:
-        - DATABASE_URL=postgresql://postgres:admin1234@postgres_db_agro:5432/test
+        - DATABASE_URL=postgresql://postgres:admin1234@postgres:5432/test
 
     pgadmin:
       container_name: pgadmin_container_agro
