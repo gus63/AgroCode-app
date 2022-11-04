@@ -31,15 +31,6 @@
       environment:
         - DATABASE_URL=postgresql://postgres:admin1234@postgres:5432/test
 
-    nginx:
-      image: nginx:1.23.2
-      ports:
-        - "1080:80"
-      networks:
-        - backend
-      depends_on:
-        - agro_app
-
     pgadmin:
       container_name: pgadmin_container_agro
       image: dpage/pgadmin4
@@ -55,10 +46,22 @@
       networks:
         - backend
       depends_on:
-        - nginx
+        - postgres
+
+    nginx:
+      image: nginx:1.23.2
+      ports:
+        - "1080:80"
+      networks:
+        - backend
+      depends_on:
+        - agro_app
+        - pgadmin
 
   volumes:
       db_agro:
+          driver: local
+      pgadmin:
           driver: local
   networks:
       backend:
