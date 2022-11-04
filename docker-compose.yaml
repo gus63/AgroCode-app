@@ -28,6 +28,8 @@
         - postgres
       env_file:
         - .env
+      environment:
+        - DATABASE_URL=postgresql://postgres:admin1234@postgres:5432/test
 
     nginx:
       image: nginx:1.23.2
