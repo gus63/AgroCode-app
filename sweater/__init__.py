@@ -9,7 +9,7 @@ from sweater import models, routes
 app = Flask(__name__)
 auth = Blueprint('auth', __name__)
 app.secret_key = '12QwrT!'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///admin:admin1234@postgres_db_agro:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin1234@postgres_db_agro:5432/postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 db = SQLAlchemy(app)
 manager = LoginManager(app)
