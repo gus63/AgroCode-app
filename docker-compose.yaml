@@ -58,7 +58,7 @@
         - agro_app
         - pgadmin
       volumes:
-        - ./nginx.conf:/etc/nginx/conf.d/default.conf
+        - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
 
   volumes:
       db_agro:
