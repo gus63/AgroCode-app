@@ -18,5 +18,4 @@ bootstrap = Bootstrap(app)
 
 db.create_all()
 
-
 from sweater import models, routes
