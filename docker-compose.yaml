@@ -18,8 +18,8 @@
         networks:
           - backend
 
-    agro_app:
-      container_name: agro_app
+    agroapp:
+      container_name: agroapp
       restart: unless-stopped
       build: .
       ports:
@@ -55,7 +55,7 @@
       networks:
         - backend
       depends_on:
-        - agro_app
+        - agroapp
         - pgadmin
 
   volumes:
