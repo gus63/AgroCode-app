@@ -49,7 +49,7 @@
         - postgres
 
     nginx:
-      build: .nginx
+      build: ./nginx
       ports:
         - '1080:80'
       networks:
