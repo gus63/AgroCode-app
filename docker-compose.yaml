@@ -55,7 +55,7 @@
       networks:
         - backend
       depends_on:
-        - agroapp
+        - app
         - pgadmin
 
   volumes:
