@@ -20,7 +20,8 @@
     app:
       container_name: agro_app
       restart: unless-stopped
-      build: .
+     # build: .
+      image: wordpress
       ports:
         - '5000:5000'
       depends_on:
