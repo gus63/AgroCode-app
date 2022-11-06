@@ -40,7 +40,7 @@
       volumes:
         - pgadmin:/var/lib/pgadmin
       ports:
-        - '127.0.0.1:5050:80'
+        - '${PGADMIN_PORT:-5050}:80'
       restart: unless-stopped
       networks:
         - backend
