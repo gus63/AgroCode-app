@@ -30,9 +30,7 @@
       env_file:
         - .env
       networks:
-        backend:
-          - aliases:
-              - flask-app
+        - backend
 
     pgadmin:
       container_name: pgadmin_container_agro
