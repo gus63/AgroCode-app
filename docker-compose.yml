@@ -15,13 +15,13 @@
         ports:
           - '5432:5432'
         networks:
-          - backend
+          backand:
 
     app:
       container_name: agro_app
       restart: unless-stopped
       build: .
-#     image: wordpress
+#     image: WordPress
       ports:
 #       - '5000:80'
         - '5000:5000'
@@ -30,7 +30,7 @@
       env_file:
         - .env
       networks:
-        - backend
+        backend:
 
     pgadmin:
       container_name: pgadmin_container_agro
@@ -45,7 +45,7 @@
         - '${PGADMIN_PORT:-5050}:80'
       restart: unless-stopped
       networks:
-        - backend
+        backend:
       depends_on:
         - postgres
 
@@ -54,7 +54,7 @@
       ports:
         - '1080:80'
       networks:
-        - backend
+        backend:
       depends_on:
         - app
         - pgadmin
