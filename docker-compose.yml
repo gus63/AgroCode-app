@@ -49,12 +49,12 @@
 
     wordpress:
        container_name: wordpress
+       restart: unless-stopped
        image: wordpress
-    ports:
-    - '5055:80'
-    restart: unless-stopped
-    networks:
-      - backend
+       ports:
+         - '5055:80'
+       networks:
+         - backend
 
     nginx:
       build: ./.nginx
