@@ -55,7 +55,6 @@
         - '1080:80'
       networks:
         - backend
-        - aliases
       depends_on:
         - app
         - pgadmin
