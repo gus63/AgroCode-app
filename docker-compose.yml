@@ -47,6 +47,15 @@
       depends_on:
         - postgres
 
+    wordpress:
+       container_name: wordpress
+       image: wordpress
+    ports:
+    - '5055:80'
+    restart: unless-stopped
+    networks:
+      - backend
+
     nginx:
       build: ./.nginx
       ports:
@@ -56,6 +65,7 @@
       depends_on:
   #      - app
         - pgadmin
+        - wordpress
 
   volumes:
       db_agro:
