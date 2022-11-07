@@ -38,14 +38,15 @@
       ports:
         - '127.0.0.1:5050:80'
       environment:
-#        PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-tvm91@icloud.com}
-#        PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-1234}
+        PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-tvm91@icloud.com}
+        PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-1234}
         PGADMIN_CONFIG_SERVER_MODE: 'True'
       volumes:
         - pgadmin:/var/lib/pgadmin
       restart: unless-stopped
       networks:
         - backend
+      tty: true
 
     wordpress:
        container_name: wordpress
