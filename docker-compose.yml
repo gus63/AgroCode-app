@@ -32,20 +32,20 @@
 
     pgadmin:
       container_name: pgadmin_container_app
-      image: dpage/pgadmin4:6.13
+      image: dpage/pgadmin4
+      depends_on:
+        - postgres
+      ports:
+        - '127.0.0.1:5050:80'
       environment:
-        PGADMIN_SETUP_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-tvm91@icloud.com}
-        PGADMIN_SETUP_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-1234}
+        PGADMIN_SETUP_EMAIL: admin@pg.com
+        PGADMIN_SETUP_PASSWORD: 1234
         PGADMIN_CONFIG_SERVER_MODE: 'True'
       volumes:
         - pgadmin:/var/lib/pgadmin
-      ports:
-        - '127.0.0.1:5050:80'
       restart: unless-stopped
       networks:
         - backend
-      depends_on:
-        - postgres
 
     wordpress:
        container_name: wordpress
