@@ -1,11 +1,11 @@
-from sweater import app
+from sweater import app, db
 from wsgiref.simple_server import WSGIServer
 
 
 def runserver():
     if __name__ == '__main__':
-        app = create_app()
-        app.app_context().push()
-        app.run(debug=True, host='0.0.0.0', port=80)
+        with app.app_context():
+            db.create_all()
+        app.run(debug=True, host='0.0.0.0', port=5000)
     #   http_server = WSGIServer(('', 5000), app)
     #   http_server.serve_forever()

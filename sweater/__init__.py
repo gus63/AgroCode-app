@@ -17,6 +17,5 @@ manager = LoginManager(app)
 manager.login_view = 'auth.login'
 bootstrap = Bootstrap(app)
 
-db.create_all()
 
 from sweater import models, routes
