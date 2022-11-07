@@ -32,7 +32,7 @@
 
     pgadmin:
       container_name: pgadmin_container_agro
-      image: dpage/pgadmin4:6
+      image: dpage/pgadmin4:6.13
       environment:
         PGADMIN_SETUP_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-tvm91@icloud.com}
         PGADMIN_SETUP_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-1234}
