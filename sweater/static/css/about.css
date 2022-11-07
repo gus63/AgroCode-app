@@ -16,11 +16,10 @@ body .bg{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  animation-iteration-count: infinite;
   align-items: center;
-
   min-height: 50vh;
   padding: 20px;
-
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
