@@ -4,7 +4,6 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
-from sweater.routes import create_app
 
 app = Flask(__name__)
 auth = Blueprint('auth', __name__)
@@ -17,6 +16,7 @@ manager = LoginManager(app)
 manager.login_view = 'auth.login'
 bootstrap = Bootstrap(app)
 
-db.create_all()
+with app.app_context():
+    db.create_all()
 
 from sweater import models, routes
