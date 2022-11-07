@@ -2,11 +2,9 @@ from flask import Flask, Blueprint
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
-import config
 
 
 app = Flask(__name__)
-app.config.from_object(config)
 auth = Blueprint('auth', __name__)
 app.secret_key = '12QwrT!'
 # для portainer BD-->
@@ -19,7 +17,6 @@ manager = LoginManager(app)
 manager.login_view = 'auth.login'
 bootstrap = Bootstrap(app)
 
-with app.app_context():
-    db.create_all()
+db.create_all()
 
 from sweater import models, routes
