@@ -31,7 +31,7 @@
         - backend
 
     pgadmin:
-      container_name: pgadmin_container_agro
+      container_name: pgadmin_container_app
       image: dpage/pgadmin4:6.13
       environment:
         PGADMIN_SETUP_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-tvm91@icloud.com}
