@@ -1,7 +1,7 @@
 FROM python:3.9
 LABEL maintainer = "Vyacheslav Tyurin <tvm91@yandex.ru>"
-RUN mkdir /app
-WORKDIR /app
+# RUN mkdir /app
+WORKDIR /
 COPY . .
 RUN python -m venv venv
 RUN venv/bin/pip install --upgrade pip
