@@ -4,6 +4,8 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
+from sweater.routes import create_app
+
 app = Flask(__name__)
 auth = Blueprint('auth', __name__)
 app.secret_key = '12QwrT!'
