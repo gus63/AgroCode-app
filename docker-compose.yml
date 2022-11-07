@@ -70,8 +70,8 @@
   volumes:
       db_agro:
           driver: local
-#      pgadmin:
-#          driver: local
+      pgadmin:
+          driver: local
   networks:
       backend:
           driver: bridge
