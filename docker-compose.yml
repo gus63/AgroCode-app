@@ -41,6 +41,8 @@
         PGADMIN_SETUP_EMAIL: admin@pg.com
         PGADMIN_SETUP_PASSWORD: 1234
         PGADMIN_CONFIG_SERVER_MODE: 'True'
+#      volumes:
+#        - pgadmin:/var/lib/pgadmin
       restart: unless-stopped
       networks:
         - backend
@@ -68,8 +70,8 @@
   volumes:
       db_agro:
           driver: local
-      pgadmin:
-          driver: local
+#      pgadmin:
+#          driver: local
   networks:
       backend:
           driver: bridge
