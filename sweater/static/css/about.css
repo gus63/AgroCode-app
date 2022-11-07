@@ -50,6 +50,7 @@ p {
   overflow: hidden;
 
   animation: revealBlock 0s var(--t) forwards;
+
 }
 
 .block-reveal::after {
