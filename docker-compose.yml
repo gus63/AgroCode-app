@@ -22,7 +22,7 @@
       restart: unless-stopped
       build: .
       ports:
-        - '5000:5000'
+        - '127.0.0.1:5000:5000'
       depends_on:
         - postgres
       env_file:
@@ -48,15 +48,6 @@
         - backend
       tty: true
 
-    wordpress:
-       container_name: wordpress
-       restart: unless-stopped
-       image: wordpress
-       ports:
-         - '127.0.0.1:5055:80'
-       networks:
-         - backend
-
     nginx:
       build: ./.nginx
       ports:
@@ -64,9 +55,8 @@
       networks:
         -  backend
       depends_on:
-        #- app
+        - app
         - pgadmin
-        - wordpress
 
   volumes:
       db_agro:
