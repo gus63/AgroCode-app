@@ -13,7 +13,7 @@ certifi
 cffi
 charset-normalizer
 click
-colorama
+colorama==0.4.6
 cryptography
 debugpy
 decorator
@@ -31,7 +31,7 @@ entrypoints
 environment
 executing
 filelock
-Flask==2.2.1
+Flask==2.2.2
 Flask-Bootstrap
 Flask-Login
 Flask-Migrate
