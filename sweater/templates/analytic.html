@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <title>Analitic - AgroCode</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700" rel="stylesheet">
-	<link href="{{ url_for('static',filename='css/analytic.css') }}" rel="stylesheet" />
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="{{ url_for('static',filename='css/analytic.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static',filename='js/analytic.js') }}"></script>
 </head>
 <body>
 <!-- Sticky navbar-->
@@ -32,13 +31,72 @@
 			</div>
 		</nav>
 	</header>
-
-		<section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center mt-4">
+<!-- Header -->
+    <div class="top">
+        <div class="text-center mt-4">
                     <h2 class="section-heading text-uppercase mt-4">Детальная аналитика</h2>
                     <h3 class="section-subheading text-muted mt-4">Полная прозрачная картина бизнеса в любой момент в течение сезона и по его окончании</h3>
+        </div>
+    </div>
+	<section class="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <ol class="carousel-indicators tabs">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                            <figure>
+                                <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-01-179x179.png" class="img-fluid" alt="">
+                            </figure>
+                        </li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                            <figure>
+                                <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-02-306x306.png" class="img-fluid" alt="">
+                            </figure>
+                        </li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                            <figure>
+                                <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-03-179x179.png" class="img-fluid" alt="">
+                            </figure>
+                        </li>
+                    </ol>
                 </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                    <div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
+                        <h3>WHAT OUR CLIENTS SAY</h3>
+                        <h1>TESTIMONIALS</h1>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="quote-wrapper">
+                                    <p>I have tried a lot of food delivery services but Plate is something out of this world! Their food is really healthy and it tastes great, which is why I recommend this company to all my friends!</p>
+                                    <h3>peter lee</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="quote-wrapper">
+                                    <p>I have tried a lot of food delivery services but Plate is something out of this world! Their food is really healthy and it tastes great, which is why I recommend this company to all my friends!</p>
+                                    <h3>peter lee</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="quote-wrapper">
+                                    <p>I have tried a lot of food delivery services but Plate is something out of this world! Their food is really healthy and it tastes great, which is why I recommend this company to all my friends!</p>
+                                    <h3>peter lee</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section" id="about">
+            <div class="container">
                 <ul class="timeline mt-4">
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static',filename='img/analytic/analytic.jpg') }}" alt="..." /></div>
