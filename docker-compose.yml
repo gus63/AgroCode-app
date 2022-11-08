@@ -17,19 +17,19 @@
         networks:
           - backend
 
-#    app:
-#      container_name: agro_app
-#      restart: unless-stopped
-#      build: .
-#      command: python start.py run -h 0.0.0.0:5000
-#      ports:
-#        - '5000:5000'
-#      depends_on:
-#        - postgres
-#      env_file:
-#        - .env
-#      networks:
-#        - backend
+    app:
+      container_name: agro_app
+      restart: unless-stopped
+      build: .
+      command: python start.py run -h 0.0.0.0:5000
+      ports:
+        - '5000:5000'
+      depends_on:
+        - postgres
+      env_file:
+        - .env
+      networks:
+        - backend
 
     pgadmin:
       container_name: pgadmin_container_app
