@@ -21,6 +21,7 @@ def verify_password(self, password):
 
 @app.route('/', methods=['GET'])
 def home():
+    return "helo world"
     return render_template('index.html')
 
 
@@ -138,7 +139,6 @@ def redirect_to_signin(response):
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
-    print()
 
 
 # Internal Server Error
