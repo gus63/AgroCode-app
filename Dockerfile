@@ -3,7 +3,7 @@ LABEL maintainer = "Vyacheslav Tyurin <tvm91@yandex.ru>"
 # RUN mkdir /app
 # RUN apt-get update -y && apt-get install -y build-essential
 COPY . .
-WORKDIR /app
+WORKDIR /
 # RUN python -m venv venv
 # RUN venv/bin/pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
