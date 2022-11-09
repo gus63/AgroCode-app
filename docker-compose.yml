@@ -57,7 +57,7 @@
       networks:
         -  backend
       depends_on:
-#        - app
+        - app
         - pgadmin
 
   volumes:
