@@ -24,6 +24,12 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/nav', methods=['GET'])
+def nav_bar():
+    title = "AgroCode - You agro management"
+    return render_template('layouts/nav-bar.html', title=title)
+
+
 @app.route('/team', methods=['GET'])
 def team():
     return render_template('team.html')
@@ -134,15 +140,16 @@ def redirect_to_signin(response):
 
     return response
 
+
 # Invalid URL
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("404.html"), 404
+    return render_template("layouts/404.html"), 404
 
 
 # Internal Server Error
 @app.errorhandler(500)
 def page_not_found(e):
-    return render_template("500.html"), 500
+    return render_template("layouts/500.html"), 500
 
 
