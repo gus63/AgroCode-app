@@ -11,4 +11,4 @@ RUN python -m venv venv
 # ENV FLASK_DEBUG="docker"
 EXPOSE 5000
 # CMD ["python", "start.py"]
-CMD . venv/bin/activate && exec python start.py
+# CMD . venv/bin/activate && exec python start.py
