@@ -11,4 +11,4 @@ RUN venv/bin/pip install -r requirements.txt
 EXPOSE 5000
 # CMD ["python", "start.py"]
 # CMD . venv/bin/activate && python start.py && exec gunicorn -b :5000 --access-logfile - --error-logfile - app:app
-CMD . venv/bin/activate && python start.py && gunicorn -b :5000 --access-logfile - --error-logfile - app:app
+CMD . venv/bin/activate && python start.py
