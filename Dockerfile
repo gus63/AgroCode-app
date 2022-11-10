@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
 RUN python -m venv venv
 # RUN pip install -U --upgrade pip
-# RUN venv/bin/pip install -r requirements.txt
+RUN venv/bin/pip install -r requirements.txt
 # ENV FLASK_DEBUG="docker"
 EXPOSE 5000
 # CMD ["python", "start.py"]
