@@ -9,4 +9,5 @@ RUN python -m venv venv
 # RUN venv/bin/pip install -r requirements.txt
 # ENV FLASK_DEBUG="docker"
 EXPOSE 5000
-ENTRYPOINT ["sh", "-c", "/app/bt.sh"]
+# CMD ["python", "start.py"]
+CMD . venv/bin/activate && python start.py && exec gunicorn -b :5000 --access-logfile - --error-logfile - app:app
