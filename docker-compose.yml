@@ -23,6 +23,7 @@
       tty: true
       build: .
  #     command: python start.py run -h 0.0.0.0:5000
+      command: gunicorn -b 0.0.0.0:5000 app:app
       ports:
         - '5000:5000'
  #     depends_on:
