@@ -12,7 +12,6 @@ auth = Blueprint('auth', __name__)
 # для portainer BD-->
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:admin1234@postgres:5432/postgres"
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
-print("postgresql://admin:admin1234@postgres:5432/postgres", file=sys.stderr)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 # для локальной BD -->
