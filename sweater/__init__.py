@@ -14,7 +14,6 @@ migrate = Migrate(app, db)
 app.secret_key = '12QwrT!'
 # для локальной BD -->
 # app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:admin1234@localhost:5432/postgres"
-
 manager = LoginManager(app)
 manager.login_view = 'auth.login'
 bootstrap = Bootstrap(app)
