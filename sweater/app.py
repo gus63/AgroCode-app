@@ -1,5 +1,3 @@
-import sys
-
 from flask import Flask, Blueprint
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
