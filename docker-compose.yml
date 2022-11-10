@@ -25,8 +25,8 @@
  #     command: python start.py run -h 0.0.0.0:5000
       ports:
         - '5000:5000'
-      depends_on:
-        - postgres
+ #     depends_on:
+ #       - postgres
       env_file:
         - .env
       networks:
