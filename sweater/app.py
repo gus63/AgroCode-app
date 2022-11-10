@@ -1,8 +1,8 @@
 from flask import Flask, Blueprint
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
-from flask_migrate import Migrate
-from flask_sqlalchemy import SQLAlchemy
+# from flask_migrate import Migrate
+# from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.secret_key = '12QwrT!'
@@ -18,4 +18,9 @@ manager = LoginManager(app)
 manager.login_view = 'auth.login'
 bootstrap = Bootstrap(app)
 
-from sweater import models, routes
+
+@app.route('/', methods=['GET'])
+def home():
+    return 'hello !!!!'
+
+# from sweater import models, routes

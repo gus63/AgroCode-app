@@ -21,7 +21,6 @@ def verify_password(self, password):
 
 @app.route('/', methods=['GET'])
 def home():
-    return 'hello !!!!!!!'
     return render_template('index.html')
 
 
