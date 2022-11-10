@@ -9,4 +9,4 @@ RUN python -m venv venv
 # RUN venv/bin/pip install -r requirements.txt
 # ENV FLASK_DEBUG="docker"
 EXPOSE 5000
-ENTRYPOINT ["./bt.sh"]
+ENTRYPOINT ["sh", "-c", "/app/bt.sh"]
