@@ -23,7 +23,7 @@
       tty: true
       build: .
  #     command: python start.py run -h 0.0.0.0:5000
-      command: . venv/bin/activate && gunicorn -b :5000 --access-logfile - --error-logfile - app:app
+      command: gunicorn -b :5000 --access-logfile - --error-logfile - app:app
       ports:
         - '5000:5000'
  #     depends_on:
