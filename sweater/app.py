@@ -5,7 +5,7 @@ from flask import Flask
 # from flask_migrate import Migrate
 # from flask_sqlalchemy import SQLAlchemy
 
-app = Flask("app")
+app = Flask(__name__)
 # app.secret_key = '12QwrT!'
 # auth = Blueprint('auth', __name__)
 # для portainer BD-->
