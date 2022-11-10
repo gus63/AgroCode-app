@@ -1,6 +1,6 @@
 from flask_login import UserMixin
 
-from sweater import db, manager
+from app import db, manager
 
 
 class Message(db.Model):

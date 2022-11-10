@@ -17,8 +17,3 @@ migrate = Migrate(app, db)
 manager = LoginManager(app)
 manager.login_view = 'auth.login'
 bootstrap = Bootstrap(app)
-
-with app.app_context():
-    db.create_all()
-
-from sweater import models, routes
