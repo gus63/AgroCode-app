@@ -14,6 +14,4 @@ EXPOSE 5000
 # CMD ["python", "start.py"]
 # CMD . venv/bin/activate && python start.py && exec gunicorn -b 0.0.0.0:5000 --access-logfile - --error-logfile - app:app
 # CMD . venv/bin/activate && python start.py && exec gunicorn -b 0.0.0.0:5000 --access-logfile - --error-logfile - app:app
-source venv/bin/activate
-gunicorn -b :5000 --access-logfile - --error-logfile - wsgi:app
 CMD ["./startup.sh"]
