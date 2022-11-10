@@ -10,10 +10,12 @@ auth = Blueprint('auth', __name__)
 # для portainer BD-->
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:admin1234@postgres:5432/postgres"
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+# db = SQLAlchemy(app)
+# migrate = Migrate(app, db)
 # для локальной BD -->
 # app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:admin1234@localhost:5432/postgres"
 manager = LoginManager(app)
 manager.login_view = 'auth.login'
 bootstrap = Bootstrap(app)
+
+from sweater import models, routes
