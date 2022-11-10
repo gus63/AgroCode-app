@@ -11,6 +11,6 @@ COPY . .
 RUN pip install -r requirements.txt
 # ENV FLASK_DEBUG="docker"
 EXPOSE 5000
-CMD ["python", "start.py"]
+# CMD ["python", "start.py"]
 # CMD . venv/bin/activate && python start.py && exec gunicorn -b :5000 --access-logfile - --error-logfile - app:app
-# CMD . venv/bin/activate && exec python start.py
+CMD exec python start.py
