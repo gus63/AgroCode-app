@@ -110,3 +110,4 @@ wcwidth
 websocket-client
 Werkzeug
 WTForms
+db
