@@ -1,4 +1,4 @@
-from sweater import app, db
+from sweater import app
 from wsgiref.simple_server import WSGIServer
 
 
