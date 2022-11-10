@@ -9,5 +9,4 @@ RUN python -m venv venv
 # RUN venv/bin/pip install -r requirements.txt
 # ENV FLASK_DEBUG="docker"
 EXPOSE 5000
-# CMD ["python", "start.py"]
-# CMD . venv/bin/activate && exec python start.py
+ENTRYPOINT ["./boot.sh"]
