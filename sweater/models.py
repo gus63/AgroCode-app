@@ -1,6 +1,6 @@
 from flask_login import UserMixin
 
-from app import db, manager
+from __init__ import db, manager
 
 
 class Message(db.Model):
