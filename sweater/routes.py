@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, request, flash
 from flask_login import login_user, login_required, logout_user
 from werkzeug.security import check_password_hash, generate_password_hash
-from sweater import __init__
+from sweater import app, db
 from sweater.models import Message, User
 
 
@@ -19,12 +19,12 @@ def verify_password(self, password):
     return check_password_hash(self.password_hash, password)
 
 
-@__init__.route('/', methods=['GET'])
+@app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
 
 
-@__init__.route('/nav', methods=['GET'])
+@app.route('/nav', methods=['GET'])
 def nav_bar():
     title = "AgroCode - You agro management"
     return render_template('layouts/nav-bar.html', title=title)
@@ -126,7 +126,7 @@ def register():
     return render_template('register.html')
 
 
-@__init__.route('/logout', methods=['GET', 'POST'])
+@app.route('/logout', methods=['GET', 'POST'])
 @login_required
 def logout():
     logout_user()
@@ -148,7 +148,7 @@ def page_not_found(e):
 
 
 # Internal Server Error
-@__init__.errorhandler(500)
+@app.errorhandler(500)
 def page_not_found(e):
     return render_template("layouts/500.html"), 500
 
