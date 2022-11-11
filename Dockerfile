@@ -18,4 +18,4 @@ LABEL maintainer = "Vyacheslav Tyurin <tvm91@yandex.ru>"
 COPY requirements.txt /
 RUN pip3 install -r /requirements.txt
 COPY app.py .
-CMD ["gunicorn" , "-b", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn" , "-b", "0.0.0.0:5000", "app:app"]
