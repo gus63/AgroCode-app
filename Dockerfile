@@ -15,8 +15,13 @@ LABEL maintainer = "Vyacheslav Tyurin <tvm91@yandex.ru>"
 # CMD . venv/bin/activate && python start.py && exec gunicorn -b 0.0.0.0:5000 --access-logfile - --error-logfile - app:app
 # CMD . venv/bin/activate && python start.py && exec gunicorn -b 0.0.0.0:5000 --access-logfile - --error-logfile - app:app
 #CMD ["./startup.sh"]
+##COPY requirements.txt /
+##RUN pip3 install -r /requirements.txt
+##COPY app.py .
+##EXPOSE 5000
+##CMD exec gunicorn -b 0.0.0.0:5000 --access-logfile - --error-logfile - app:app
 COPY requirements.txt /
 RUN pip3 install -r /requirements.txt
-COPY app.py .
+COPY . .
 EXPOSE 5000
-CMD exec gunicorn -b 0.0.0.0:5000 --access-logfile - --error-logfile - app:app
+CMD exec gunicorn -b 0.0.0.0:5000 --access-logfile - --error-logfile - sweater.__init__:app
