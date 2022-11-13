@@ -44,6 +44,6 @@ class User(db.Model, UserMixin):
         return 'User %r' % self.username
 
 
-@manager.user_loader
-def load_user(user_id):
-    return User.query.get(user_id)
+#@manager.user_loader
+#def load_user(user_id):
+#    return User.query.get(user_id)
