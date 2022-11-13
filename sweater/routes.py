@@ -26,8 +26,8 @@ def home():
 
 @app.route('/nav', methods=['GET'])
 def nav_bar():
-    title = "AgroCode - You agro management"
-    return render_template('base.html', title=title)
+    return render_template('base.html')
+
 
 @app.route('/test', methods=['GET'])
 def test():
@@ -36,7 +36,7 @@ def test():
 
 @app.route('/test1', methods=['GET'])
 def test_1():
-    return render_template('test1.html')
+    return render_template('sweater.html')
 
 
 @app.route('/team', methods=['GET'])

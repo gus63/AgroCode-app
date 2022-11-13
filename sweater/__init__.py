@@ -16,3 +16,10 @@ manager.login_view = 'auth.login'
 bootstrap = Bootstrap(app)
 
 from sweater import models, routes
+
+with app.app_context():
+    db.create_all()
+
+    db.session.add(User('admin', 'admin@example.com'))
+    db.session.add(User('guest', 'guest@example.com'))
+    db.session.commit()
