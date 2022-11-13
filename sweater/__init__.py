@@ -11,16 +11,16 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:admin1234@postgres:5
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 db = SQLAlchemy(app)
 
-from sweater.models import Role, User
+#from sweater.models import Role, User
 
-with app.app_context():
-    db.drop_all()
-    db.create_all()
-    db.session.commit()
+#with app.app_context():
+#    db.drop_all()
+#    db.create_all()
+#    db.session.commit()
 
-#from sweater import models, routes
+from sweater import models, routes
 
-#migrate = Migrate(app, db)
-#manager = LoginManager(app)
-#manager.login_view = 'auth.login'
-#bootstrap = Bootstrap(app)
+migrate = Migrate(app, db)
+manager = LoginManager(app)
+manager.login_view = 'auth.login'
+bootstrap = Bootstrap(app)

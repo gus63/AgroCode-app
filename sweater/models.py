@@ -1,7 +1,7 @@
 from flask_login import UserMixin
 
-#from sweater import db, manager
-from sweater import db
+from sweater import db, manager
+#from sweater import db
 
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -44,6 +44,6 @@ class User(db.Model, UserMixin):
         return 'User %r' % self.username
 
 
-#@manager.user_loader
-#def load_user(user_id):
-#    return User.query.get(user_id)
+@manager.user_loader
+def load_user(user_id):
+    return User.query.get(user_id)
