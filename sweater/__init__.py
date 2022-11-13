@@ -17,7 +17,7 @@ bootstrap = Bootstrap(app)
 
 from sweater import models, routes
 
-
+# --> создание базы данных
 # with app.app_context():
 #    db.drop_all()
 #    db.create_all()
