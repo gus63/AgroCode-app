@@ -31,12 +31,7 @@ def nav_bar():
 
 @app.route('/test', methods=['GET'])
 def test():
-    return render_template('sweater.html')
-
-
-@app.route('/test1', methods=['GET'])
-def test_1():
-    return render_template('test1.html')
+    return render_template('test.html')
 
 
 @app.route('/team', methods=['GET'])
