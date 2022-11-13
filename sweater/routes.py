@@ -24,16 +24,6 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/nav', methods=['GET'])
-def nav_bar():
-    return render_template('base.html')
-
-
-@app.route('/test', methods=['GET'])
-def test():
-    return render_template('test.html')
-
-
 @app.route('/team', methods=['GET'])
 def team():
     return render_template('team.html')
@@ -59,14 +49,9 @@ def admin():
     return render_template('admin.html')
 
 
-@app.route('/chart-flot', methods=['GET'])
-def chart_flot():
-    return render_template('chart-flot.html')
-
-
-@app.route('/chart-morris', methods=['GET'])
-def chart_morris():
-    return render_template('chart-morris.html')
+@app.route('/contacts', methods=['GET'])
+def contacts():
+    return render_template('contacts.html')
 
 
 @app.route('/main', methods=['GET'])
