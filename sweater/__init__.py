@@ -10,12 +10,10 @@ app.secret_key = '12QwrT!'
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:admin1234@postgres:5432/postgres"
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
-manager = LoginManager(app)
-manager.login_view = 'auth.login'
-bootstrap = Bootstrap(app)
 
 from sweater import models, routes
+
+from sweater.models import User
 
 with app.app_context():
     db.create_all()
@@ -23,3 +21,8 @@ with app.app_context():
     db.session.add(User('admin', 'admin@example.com'))
     db.session.add(User('guest', 'guest@example.com'))
     db.session.commit()
+
+migrate = Migrate(app, db)
+manager = LoginManager(app)
+manager.login_view = 'auth.login'
+bootstrap = Bootstrap(app)
