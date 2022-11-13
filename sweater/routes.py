@@ -36,7 +36,7 @@ def test():
 
 @app.route('/test1', methods=['GET'])
 def test_1():
-    return render_template('sweater.html')
+    return render_template('test1.html')
 
 
 @app.route('/team', methods=['GET'])
