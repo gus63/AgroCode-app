@@ -11,17 +11,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:admin1234@postgres:5
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 db = SQLAlchemy(app)
 
-from sweater.models import User
+from sweater.models import Role, User
 
 with app.app_context():
+    db.drop_all()
     db.create_all()
-
-    db.session.add(User('admin', 'admin@example.com'))
-    db.session.add(User('guest', 'guest@example.com'))
     db.session.commit()
-
-    users = User.query.all()
-    print(users)
 
 #from sweater import models, routes
 
