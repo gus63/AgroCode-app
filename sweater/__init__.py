@@ -20,9 +20,12 @@ with app.app_context():
     db.session.add(User('guest', 'guest@example.com'))
     db.session.commit()
 
-from sweater import models, routes
+    users = User.query.all()
+    print(users)
 
-migrate = Migrate(app, db)
-manager = LoginManager(app)
-manager.login_view = 'auth.login'
-bootstrap = Bootstrap(app)
+#from sweater import models, routes
+
+#migrate = Migrate(app, db)
+#manager = LoginManager(app)
+#manager.login_view = 'auth.login'
+#bootstrap = Bootstrap(app)
