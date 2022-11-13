@@ -11,8 +11,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://admin:admin1234@postgres:5
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 db = SQLAlchemy(app)
 
-from sweater import models, routes
-
 from sweater.models import User
 
 with app.app_context():
@@ -21,6 +19,8 @@ with app.app_context():
     db.session.add(User('admin', 'admin@example.com'))
     db.session.add(User('guest', 'guest@example.com'))
     db.session.commit()
+
+from sweater import models, routes
 
 migrate = Migrate(app, db)
 manager = LoginManager(app)
