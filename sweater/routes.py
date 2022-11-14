@@ -24,11 +24,6 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/ind', methods=['GET'])
-def ind():
-    return render_template('index.html')
-
-
 @app.route('/team', methods=['GET'])
 def team():
     return render_template('team.html')
