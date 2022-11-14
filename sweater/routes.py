@@ -41,7 +41,7 @@ def about():
 
 @app.route('/analytic', methods=['GET'])
 def analytic():
-    return render_template('analytic.html')
+    return render_template('analytics.html')
 
 
 @app.route('/admin', methods=['GET'])

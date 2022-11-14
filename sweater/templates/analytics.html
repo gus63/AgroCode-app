@@ -1,0 +1,127 @@
+{% extends 'sweater.html' %}
+
+{% block title %}
+Аналитика
+{% endblock %}
+
+{% block body %}
+<section id="analytics" class="analytics mt-4">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Детальная аналитика</h2>
+          <p>Полная прозрачная картина бизнеса в любой момент в течение сезона и по его окончании.</p>
+        </div>
+
+        <div class="row gy-5">
+
+          <div class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+            <div class="analytics-item">
+              <div class="img">
+                <img src="{{ url_for('static',filename='img/analytic/analytic-1.jpg') }}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Принимайте решения на основе данных</h3>
+                </a>
+                <p>С простым и понятным дашбордом.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+            <div class="analytics-item">
+              <div class="img">
+                <img src="{{ url_for('static',filename='img/analytic/analytic-2.jpg') }}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Прозрачная визуализация вашего бизнеса</h3>
+                </a>
+                <p>В любой момент сезона.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+            <div class="analytics-item">
+              <div class="img">
+                <img src="{{ url_for('static',filename='img/analytic/analytic-3.jpg') }}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Управление и аналитика продаж</h3>
+                </a>
+                <p>На основе рыночных данных.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="500">
+            <div class="analytics-item">
+              <div class="img">
+                <img src="{{ url_for('static',filename='img/analytic/analytic-4.jpg') }}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-bounding-box-circles"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Собираем открытые данные с рынка и превращаем их в полезную информацию</h3>
+                </a>
+                <p>Следите за трендами и сравнивайте.</p>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="600">
+            <div class="analytics-item">
+              <div class="img">
+                <img src="{{ url_for('static',filename='img/analytic/analytic-1.jpg') }}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-calendar4-week"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Velit Doloremque</h3>
+                </a>
+                <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="700">
+            <div class="analytics-item">
+              <div class="img">
+                <img src="{{ url_for('static',filename='img/analytic/analytic-2.jpg') }}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-chat-square-text"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Dolori Architecto</h3>
+                </a>
+                <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+</section>
+{% endblock %}
