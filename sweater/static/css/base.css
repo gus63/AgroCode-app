@@ -2047,3 +2047,119 @@ h6 span{
     border-color: transparent
   }
 }
+
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+.pricing {
+  background: rgba(72, 86, 100, 0.04);
+}
+
+.pricing .pricing-item {
+  padding: 60px 40px;
+  box-shadow: 0 3px 20px -2px rgba(72, 86, 100, 0.15);
+  background: #FFFFFFFF;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #FFFFFFFF;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pricing .pricing-header {
+  background: linear-gradient(rgba(72, 86, 100, 0.9), rgba(72, 86, 100, 0.9)), url("../img/pricing-bg.jpg") center center;
+  background-size: cover;
+  text-align: center;
+  padding: 40px;
+  margin: -60px -40px 0;
+}
+
+.pricing h3 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 36px;
+  color: #FFFFFFFF;
+}
+
+.pricing h4 {
+  font-size: 48px;
+  color: #FFFFFFFF;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 0;
+}
+
+.pricing h4 sup {
+  font-size: 28px;
+}
+
+.pricing h4 span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+}
+
+.pricing ul {
+  padding: 30px 0;
+  list-style: none;
+  color: #6C757DFF;
+  text-align: left;
+  line-height: 20px;
+}
+
+.pricing ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.pricing ul i {
+  color: #E6A756FF;
+  font-size: 36px;
+  padding-right: 3px;
+  line-height: 0;
+}
+
+.pricing ul .na {
+  color: rgba(108, 117, 125, 0.5);
+}
+
+.pricing ul .na i {
+  color: rgba(108, 117, 125, 0.5);
+  font-size: 24px;
+  padding-left: 4px;
+}
+
+.pricing ul .na span {
+  text-decoration: line-through;
+}
+
+.pricing .buy-btn {
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 6px;
+  color: #E6A756FF;
+  transition: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+  border: 1px solid #E6A756FF;
+}
+
+.pricing .buy-btn:hover {
+  background: #E6A756FF);
+  color: #FFFFFFFF;
+}
+
+.pricing .featured {
+  border-color: #E6A756FF;
+}
+
+.pricing .featured .pricing-header {
+  background: linear-gradient(rgba(230, 167, 86, 0.9), rgba(230, 167, 86, 0.9)), url("../img/pricing-bg.jpg") center center;
+}
+
+.pricing .featured .buy-btn {
+  background: #E6A756FF;
+  color: #FFFFFFFF;
+}
