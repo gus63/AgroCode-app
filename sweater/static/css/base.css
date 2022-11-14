@@ -81,7 +81,7 @@ h6 {
 }
 
 .hero-fullscreen .btn-get-started:hover {
-  background: rgba(249, 114, 51, 0.8);
+  background: rgba(47, 23, 15, 0.9);
 }
 
 .hero-fullscreen .btn-watch-video {
@@ -106,7 +106,7 @@ h6 {
 }
 
 .hero-fullscreen .btn-watch-video:hover i {
-  color: rgba(249, 114, 51, 0.8);
+  color: rgba(47, 23, 15, 0.9);
 }
 
 @media (max-width: 640px) {
@@ -123,6 +123,200 @@ h6 {
   .hero-fullscreen .btn-watch-video {
     font-size: 14px;
   }
+}
+
+/*--------------------------------------------------------------
+# Call To Action Section
+--------------------------------------------------------------*/
+.cta {
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.cta .container {
+  padding: 80px;
+  background: rgba(72, 86, 100, 0.1);
+  border-radius: 15px;
+}
+
+@media (max-width: 992px) {
+  .cta .container {
+    padding: 60px;
+  }
+}
+
+.cta .content h3 {
+  color: #000000FF;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.cta .content h3 em {
+  font-style: normal;
+  position: relative;
+}
+
+.cta .content h3 em:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 10px;
+  background: rgba(249, 114, 51, 0.5);
+  z-index: -1;
+}
+
+.cta .content p {
+  color: ##000000;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.cta .content .cta-btn {
+  color: #FFFFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-top: 10px;
+  background: #E6A756FF;
+}
+
+.cta .content .cta-btn:hover {
+  background: rgba(47, 23, 15, 0.9);
+}
+
+.cta .img {
+  position: relative;
+}
+
+.cta .img:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  transform: rotate(12deg);
+}
+
+.cta .img:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  transform: rotate(6deg);
+}
+
+.cta .img img {
+  position: relative;
+  z-index: 3;
+  border-radius: 15px;
+}
+
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 0 0 60px 0;
+}
+
+.clients .swiper-slide img {
+  opacity: 0.5;
+  transition: 0.3s;
+  filter: grayscale(100);
+}
+
+.clients .swiper-slide img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# F.A.Q Section
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+  .faq {
+    padding: 0;
+  }
+}
+
+.faq .content h3 {
+  font-weight: 400;
+  font-size: 34px;
+  color: #000000FF;
+}
+
+.faq .content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.faq .content p {
+  font-size: 15px;
+  color: #6C757DFF;
+}
+
+.faq .img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 400px;
+}
+
+.faq .accordion-item {
+  border: 0;
+  margin-top: 15px;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.06);
+}
+
+.faq .accordion-collapse {
+  border: 0;
+}
+
+.faq .accordion-button {
+  padding: 15px 40px 20px 60px;
+  font-weight: 600;
+  border: 0;
+  font-size: 18px;
+  color: #1A1F24FF;
+  text-align: left;
+  background: #FFFFFFFF;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  color: #E6A756FF;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.faq .question-icon {
+  position: absolute;
+  top: 14px;
+  left: 25px;
+  font-size: 20px;
+  color: #E6A756FF;
+}
+
+.faq .accordion-button:after {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #E6A756FF;
+}
+
+.faq .accordion-body {
+  padding: 0 30px 25px 60px;
+  border: 0;
+  border-radius: 5px;
+  background: #FFFFFFFF;
+  box-shadow: none;
 }
 
 /*--------------------------------------------------------------
@@ -970,7 +1164,7 @@ section {
 
 .onfocus .video-play {
   min-height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../img/onfocus-video-bg.jpg") center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../img/products/prod.jpg") center center;
   background-size: cover;
 }
 
