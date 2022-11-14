@@ -8,24 +8,23 @@
 
 <!-- register form -->
 <form method="POST">
-	<section class="wrapper">
-		<div class="message">
-		  <div class="section">
-				{% with messages = get_flashed_messages() %}
-			  {% if messages %}
-				<ul class=flashes>
-				{% for message in messages %}
-				  <li>{{ message }}</li>
-				{% endfor %}
-				</ul>
-			  {% endif %}
-			{% endwith %}
-			</div>
-		</div>
-	</section>
-
 	<div class="section">
 		<div class="container">
+			<section class="wrapper mt-4">
+				<div class="error-message">
+				  <div class="section">
+					  {% with messages = get_flashed_messages() %}
+						  {% if messages %}
+							<ul class=flashes>
+							{% for message in messages %}
+							  <li>{{ message }}</li>
+							{% endfor %}
+							</ul>
+						  {% endif %}
+					  {% endwith %}
+					</div>
+				</div>
+			</section>
 			<div class="row full-height justify-content-center">
 				<div class="col-12 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">

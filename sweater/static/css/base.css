@@ -1491,7 +1491,8 @@ h6 span{
   display: block;
 }
 .full-height{
-  min-height: 100vh;
+  min-height: 0vh;
+  position: center;
 }
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
@@ -1726,15 +1727,15 @@ h6 span{
   place-items: center;
 }
 
-.message {
+.error-message {
   width: 50ch;
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: px solid;
   font-family: robotic;
-  font-size: 2em;
-  color: #2a2b38;
+  font-size: 1.5em;
+  color: #e6a756;
 }
 
 @keyframes typing {
