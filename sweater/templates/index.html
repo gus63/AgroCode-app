@@ -161,11 +161,23 @@
             <h3><em>AgroCode</em> в любом месте, в любое время</h3>
             <p> Скачать на все платформы.</p>
           </div>
-          <div class="col-lg-8 mt-4">
+          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
+            <div class="img">
+              <img src="{{ url_for('static',filename='img/app.svg') }}" alt="" class="img-fluid">
+            </div>
+          </div>
+          </div>
+          <div class="btn-app">
             <!-- App Store button -->
             <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn apple-btn" role="button">
               <span class="market-button-subtitle">Скачать с</span>
               <span class="market-button-title">App Store</span>
+            </a>
+
+            <!-- iOS button -->
+            <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn apple-btn" role="button">
+              <span class="market-button-subtitle">Скачать для</span>
+              <span class="market-button-title">macOS</span>
             </a>
 
             <!-- Google Play button -->
@@ -173,14 +185,13 @@
               <span class="market-button-subtitle">Скачать с</span>
               <span class="market-button-title">Google Play</span>
             </a>
-          </div>
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="{{ url_for('static',filename='img/app.jpg') }}" alt="" class="img-fluid">
-            </div>
-          </div>
 
-        </div>
+            <!-- Windows OS button -->
+            <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn windows-btn" role="button">
+              <span class="market-button-subtitle">Скачать для</span>
+              <span class="market-button-title">Windows</span>
+            </a>
+          </div>
 
       </div>
 </section>
