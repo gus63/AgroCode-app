@@ -163,12 +163,12 @@ h6 {
   right: 0;
   bottom: 10px;
   height: 10px;
-  background: rgba(249, 114, 51, 0.5);
+  background: rgba(230, 167, 86, 0.9);
   z-index: -1;
 }
 
 .cta .content p {
-  color: ##000000;
+  color: #000000;
   font-weight: 600;
   font-size: 18px;
 }
