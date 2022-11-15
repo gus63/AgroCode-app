@@ -84,8 +84,8 @@ def register():
                 db.session.commit()
     else:
         if request.method == 'POST':
-            if logname and logpass and logemail:
-                user = User.query.filter_by(login=logname).first()
+            if logpass and logemail:
+                user = User.query.filter_by(login=logemail).first()
 
                 if user and check_password_hash(user.password, logpass):
                     login_user(user)
@@ -102,7 +102,7 @@ def register():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('hello_world'))
+    return redirect(url_for('register'))
 
 
 @app.after_request
