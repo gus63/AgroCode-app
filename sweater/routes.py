@@ -52,7 +52,7 @@ def admin():
 
 @app.route('/profile', methods=['GET'])
 def profile():
-    return render_template('clients-admin/profile.html')
+    return render_template('clients-admin/profile-map.html')
 
 
 @app.route('/contacts', methods=['GET'])
