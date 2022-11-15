@@ -64,26 +64,28 @@ def psw_reset():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     email = request.form.get('email')
+    login = request.form.get('login')
     password = request.form.get('password')
     password2 = request.form.get('password2')
+    logname = request.form.get('logname')
     logpass = request.form.get('logpass')
     logemail = request.form.get('logemail')
     check = request.form.get('reg-log')
     if check == 'on':
         if request.method == 'POST':
-            if not (email or password or password2):
+            if not (email or login or password or password2):
                 flash('Пожалуйста, заполните все поля!')
             elif password != password2:
                 flash('Пароль не совпадает!')
             else:
                 hash_pwd = generate_password_hash(password)
-                new_user = User(password=hash_pwd, email=email)
+                new_user = User(login=login, password=hash_pwd, email=email)
                 db.session.add(new_user)
                 db.session.commit()
     else:
         if request.method == 'POST':
-            if logpass and logemail:
-                user = User.query.filter_by(login=logemail).first()
+            if logname and logpass and logemail:
+                user = User.query.filter_by(login=logname).first()
 
                 if user and check_password_hash(user.password, logpass):
                     login_user(user)
