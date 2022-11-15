@@ -50,6 +50,11 @@ def admin():
     return render_template('admin/admin.html')
 
 
+@app.route('/profile', methods=['GET'])
+def profile():
+    return render_template('clients-admin/profile.html')
+
+
 @app.route('/contacts', methods=['GET'])
 def contacts():
     return render_template('contacts.html')
@@ -102,7 +107,7 @@ def register():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('register'))
+    return redirect(url_for('home'))
 
 
 @app.after_request

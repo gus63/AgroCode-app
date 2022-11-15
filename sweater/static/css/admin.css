@@ -170,7 +170,7 @@
   border-radius: 4px;
 }
 .badge-primary {
-  background: #5873fe;
+  background: #E6A756FF;
   color: #ffffff;
 }
 .badge-success {
@@ -225,7 +225,7 @@ span.badge {
 .tabs-vertical li .nav-link.active,
 .tabs-vertical li .nav-link.active:focus,
 .tabs-vertical li .nav-link:hover {
-  background: #1976d2 none repeat scroll 0 0;
+  background: #E6A756FF none repeat scroll 0 0;
   border: 0 none;
   color: #ffffff;
 }
@@ -237,11 +237,11 @@ span.badge {
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
   background: #ffffff none repeat scroll 0 0;
-  border-color: currentcolor #1976d2 currentcolor currentcolor;
+  border-color: currentcolor #E6A756FF currentcolor currentcolor;
   border-image: none;
   border-style: none solid none none;
   border-width: 0 2px 0 0;
-  color: #1976d2;
+  color: #E6A756FF;
   margin-right: -1px;
 }
 .tabcontent-border {
@@ -260,11 +260,11 @@ span.badge {
   margin-right: 3px;
 }
 .customtab2 li a.nav-link.active {
-  background: #1976d2 none repeat scroll 0 0;
+  background: #E6A756FF none repeat scroll 0 0;
   color: #ffffff;
 }
 .customtab2 li a.nav-link:hover {
-  background: #1976d2 none repeat scroll 0 0;
+  background: #E6A756FF none repeat scroll 0 0;
   color: #ffffff;
 }
 .modal-dialog {
@@ -411,7 +411,7 @@ span.badge {
 .dt-buttons .dt-button:focus,
 .dt-buttons .dt-button.active {
   background-image: none;
-  background: #5873fe;
+  background: #E6A756FF;
   color: #ffffff;
 }
 button.dt-button:hover:not(.disabled),
@@ -707,7 +707,7 @@ a.dt-button.active:not(.disabled) {
   transition: margin-left 300ms ease-in-out 0s;
 }
 .logo {
-  background: #343957;
+  background: #2F170F;;
   display: inline-block;
   padding: 15px 0;
   text-align: center;
