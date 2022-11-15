@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Clients Slider
    */
-  new Swiper('.client-slider', {
+  new Swiper('.clients-slider', {
     speed: 400,
     loop: true,
     autoplay: {

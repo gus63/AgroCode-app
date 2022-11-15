@@ -86,7 +86,7 @@
     padding: 10px;
     line-height: 30px;
     border-bottom: none;
-    background: #2F170F;;
+    background: #2F170F;
     text-decoration: none;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -94,7 +94,7 @@
 }
 
 .sidebar .nano-content>ul li>a:hover {
-  background: linear-gradient(to right, #5772FE , #6D85FB);
+  background: linear-gradient(to right, #E6A756FF , #B38242);
 }
 
 .sidebar .nano-content>ul li>a>.sidebar-collapse-icon {
