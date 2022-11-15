@@ -20,6 +20,7 @@ def verify_password(self, password):
 
 
 @app.route('/', methods=['GET'])
+@app.route('/home', methods=['GET'])
 def home():
     return render_template('index.html')
 
@@ -46,30 +47,12 @@ def analytic():
 
 @app.route('/admin', methods=['GET'])
 def admin():
-    return render_template('admin.html')
+    return render_template('admin/admin.html')
 
 
 @app.route('/contacts', methods=['GET'])
 def contacts():
     return render_template('contacts.html')
-
-
-@app.route('/main', methods=['GET'])
-@login_required
-def main():
-    return render_template('main.html', messages=Message.query.all())
-
-
-@app.route('/add_message', methods=['POST'])
-@login_required
-def add_message():
-    text = request.form['text']
-    tag = request.form['tag']
-
-    db.session.add(Message(text, tag))
-    db.session.commit()
-
-    return redirect(url_for('main'))
 
 
 @app.route('/password-reset', methods=['GET', 'POST'])
