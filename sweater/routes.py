@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, request, flash
 from flask_login import login_user, login_required, logout_user
 from werkzeug.security import check_password_hash, generate_password_hash
 from sweater import app, db
-from sweater.models import Message, User
+from sweater.models import User
 
 
 @property
@@ -45,12 +45,14 @@ def analytic():
     return render_template('analytics.html')
 
 
-@app.route('/admin', methods=['GET'])
+@app.route('/admin/', methods=['GET'])
+@login_required
 def admin():
     return render_template('admin/admin.html')
 
 
-@app.route('/profile-map', methods=['GET'])
+@app.route('/profile-map/', methods=['GET'])
+@login_required
 def profile_map():
     return render_template('clients-admin/profile-map.html')
 
@@ -101,7 +103,7 @@ def register():
                 if user and check_password_hash(user.password, logpass):
                     login_user(user)
                     next_page = request.args.get('clients-admin/profile-map.html')
-                    return redirect('clients-admin/profile-map.html')
+                    return redirect(url_for('profile_map'))
                 else:
                     flash('Логин или пароль не верный!')
             else:
