@@ -50,8 +50,8 @@ def admin():
     return render_template('admin/admin.html')
 
 
-@app.route('/profile', methods=['GET'])
-def profile():
+@app.route('/profile-map', methods=['GET'])
+def profile_map():
     return render_template('clients-admin/profile-map.html')
 
 
@@ -64,6 +64,12 @@ def contacts():
 def psw_reset():
 
     return render_template('password-reset.html')
+
+
+@app.route('/policy', methods=['GET', 'POST'])
+def policy():
+
+    return render_template('docs/privacy-policy.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -94,8 +100,8 @@ def register():
 
                 if user and check_password_hash(user.password, logpass):
                     login_user(user)
-                    next_page = request.args.get('admin')
-                    return redirect('admin')
+                    next_page = request.args.get('clients-admin/profile-map.html')
+                    return redirect('clients-admin/profile-map.html')
                 else:
                     flash('Логин или пароль не верный!')
             else:
